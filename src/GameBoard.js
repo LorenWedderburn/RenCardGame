@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import { Button } from "./Button";
-import { Logo } from "./Logo";
+// import { Logo } from "./Logo";
 
 export function GameBoard({ deck, setScore, setPlayGame, bgMusicPlayer }) {
   const [gameDeck, setGameDeck] = useState(deck);
-  const [loaded, setLoaded] = useState(false);
+  const [_loaded, setLoaded] = useState(false);
   const [firstCard, setFirstCard] = useState(null);
   const [secondCard, setSecondCard] = useState(null);
   const [boardLock, setBoardLock] = useState(false);
