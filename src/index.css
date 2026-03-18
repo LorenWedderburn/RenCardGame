@@ -1,0 +1,267 @@
+:root {
+  --color-lightest: #edf2fa;
+  --color-light: #6fbfe3;
+  --color-medium: #2da1d6;
+  --color-dark: #ff922b;
+}
+
+body {
+  background-color: var(--color-medium);
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.game-board-container {
+  margin: auto;
+  width: 50vw;
+}
+
+#game-board {
+  padding-top: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 70vh;
+  /* min-height: 155px;
+  min-width: 270px;
+  max-width: 1600px; */
+  justify-content: center;
+  margin-top: 20px;
+  background-color: var(--color-light);
+  border-radius: 5%;
+}
+
+.game-menu-input {
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  color: var(--color-lightest);
+}
+
+.sub-title {
+  display: flex;
+  justify-content: center;
+  color: var(--color-lightest);
+}
+
+.card-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* .card:hover .card-inner {
+  transform: rotateY(180deg);
+} */
+
+.card-inner-flipped {
+  transform: rotateY(180deg);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  height: 100%;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card {
+  height: 12vh;
+  width: 7vw;
+  margin: 5px 5px;
+  perspective: 1000px;
+}
+
+.card img {
+  height: 12vh;
+  width: 7vw;
+}
+
+.game-menu-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  min-width: 375px;
+  background-color: var(--color-light);
+  border-radius: 5%;
+}
+
+.game-menu-container h2 {
+  color: var(--color-lightest);
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  height: 90vh;
+  width: 90vw;
+  background-color: var(--color-medium);
+}
+
+.game div {
+  justify-content: center;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-lightest);
+}
+
+.game-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--color-medium);
+  color: var(--color-lightest);
+  font-weight: bolder;
+  font-size: larger;
+}
+
+#deckSize {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bolder;
+  font-size: larger;
+  background-color: var(--color-medium);
+  color: var(--color-lightest);
+}
+
+#deckSize::placeholder {
+  color: var(--color-lightest);
+}
+
+@media only screen and (width < 750px) {
+  .card {
+    height: 16vh;
+    width: 12vw;
+    margin: 5px 5px;
+  }
+
+  .card img {
+    height: 16vh;
+    width: 12vw;
+  }
+
+  .game-board-container h2 {
+    display: none;
+  }
+
+  .game-board-container {
+    width: 80vw;
+  }
+
+  #game-board {
+    padding-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 120vh;
+    width: 80vw;
+    /* min-width: 350px; */
+    justify-content: center;
+    margin-top: 20px;
+    background-color: var(--color-light);
+    border-radius: 5%;
+  }
+
+  .game {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    /* min-width: 375px; */
+    height: 90vh;
+    width: 100vw;
+    background-color: var(--color-medium);
+  }
+
+  .game-menu-container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    /* min-width: 375px; */
+    height: 50vh;
+    width: 90vw;
+    background-color: var(--color-light);
+    border-radius: 5%;
+  }
+}
+
+@media only screen and (width < 500px) {
+  .card {
+    height: 16vh;
+    width: 12vw;
+    margin: 5px 5px;
+  }
+
+  .card img {
+    height: 16vh;
+    width: 12vw;
+  }
+
+  .game-board-container h2 {
+    display: none;
+  }
+
+  .game-board-container {
+    width: 80vw;
+  }
+
+  #game-board {
+    padding-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 120vh;
+    width: 80vw;
+    /* min-width: 350px; */
+    justify-content: center;
+    margin-top: 20px;
+    background-color: var(--color-light);
+    border-radius: 5%;
+  }
+
+  .game {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    /* min-width: 375px; */
+    height: 90vh;
+    width: 100vw;
+    background-color: var(--color-medium);
+  }
+
+  .game-menu-container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    /* min-width: 375px; */
+    height: 50vh;
+    width: 90vw;
+    background-color: var(--color-light);
+    border-radius: 5%;
+  }
+}
