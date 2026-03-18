@@ -5,7 +5,7 @@ import { Button } from "./Button";
 
 export function GameBoard({ deck, setScore, setPlayGame, bgMusicPlayer }) {
   const [gameDeck, setGameDeck] = useState(deck);
-  const [setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const [firstCard, setFirstCard] = useState(null);
   const [secondCard, setSecondCard] = useState(null);
   const [boardLock, setBoardLock] = useState(false);
@@ -118,6 +118,7 @@ export function GameBoard({ deck, setScore, setPlayGame, bgMusicPlayer }) {
               setLoaded={setLoaded}
               onSelectedCard={onSelectedCard}
               boardLock={boardLock}
+              loaded={loaded}
             />
           ))}
         </div>
